@@ -13,7 +13,8 @@ const CreateOrder = () => {
             body: data,
             headers: {
                 bearer_token: GetToken().token
-            }
+            },
+            mode: 'no-cors'
         }).then(res => {
             try {
                 return res.json()

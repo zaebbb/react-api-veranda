@@ -12,7 +12,8 @@ const Auth = () => {
         let formData = new FormData(document.querySelector(".form"))
         let result = await fetch(`${process.env.REACT_APP_API}/api/login/`, {
             method: "POST",
-            body: formData
+            body: formData,
+            mode: 'no-cors'
         }).then(res => {
             try {
                 return res.json();
@@ -39,9 +40,6 @@ const Auth = () => {
                 if(AuthCheck() !== false) window.location.href = "/"
             }, 1500)
         }
-
-        console.log(result)
-        console.log(resp)
     }
 
     function sendForm(e){
