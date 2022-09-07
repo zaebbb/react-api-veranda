@@ -16,8 +16,7 @@ const CreateUser = () => {
             body: data,
             headers: {
                 "bearer_token": GetToken().token
-            },
-            mode: 'no-cors'
+            }
         }).then(res => {
             try {
                 return res.json()

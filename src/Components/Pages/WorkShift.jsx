@@ -14,8 +14,7 @@ const WorkShift = () => {
             method: "GET",
             headers: {
                 "bearer_token": GetToken().token
-            },
-            mode: 'no-cors'
+            }
         }).then(res => {
             try {
                 return res.json()
@@ -23,6 +22,8 @@ const WorkShift = () => {
                 return err
             }
         })
+
+        console.log(result)
 
         if(result && result.data){
             setData(result.data)

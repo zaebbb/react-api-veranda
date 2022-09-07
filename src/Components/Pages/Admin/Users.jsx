@@ -13,8 +13,7 @@ const Users = () => {
             method: 'GET',
             headers: {
                 "bearer_token": GetToken().token
-            },
-            mode: 'no-cors'
+            }
         }).then(res => {
             try {
                 return res.json()

@@ -16,8 +16,7 @@ const CreateWorkShift = () => {
             body: data,
             headers: {
                 "bearer_token": GetToken().token
-            },
-            mode: 'no-cors'
+            }
         }).then(res => {
             try {
                 return res.json()
@@ -41,6 +40,8 @@ const CreateWorkShift = () => {
                 window.location.href = "/"
             }, 1500)
         }
+        console.log(result)
+        console.log(resp)
     }
 
     function sendForm(e){
